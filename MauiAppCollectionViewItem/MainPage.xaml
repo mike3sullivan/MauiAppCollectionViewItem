@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCollectionViewItem.MainPage">
+    <StackLayout>
+        <CollectionView 
+            ItemsSource="{Binding Data}" SelectionMode="Multiple"
+            WidthRequest="250" HorizontalOptions="Start" VerticalOptions="Start"
+            BackgroundColor="White">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="-20,0,0,0" Padding="0" BackgroundColor="Green" VerticalOptions="Center">
+                        <Label Padding="30,0,0,0" Margin="0" Text="{Binding}" VerticalOptions="Center"  />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <CollectionView 
+            ItemsSource="{Binding Data}" SelectionMode="Multiple"
+            WidthRequest="250" HorizontalOptions="Start" VerticalOptions="Start"
+            BackgroundColor="White">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="-20,0,0,0" Padding="0" VerticalOptions="Center">
+                        <Label Padding="30,0,0,0" Margin="0" Text="{Binding}" VerticalOptions="Center"  />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+        <CollectionView 
+            ItemsSource="{Binding Data}" SelectionMode="Multiple"
+            WidthRequest="250" HorizontalOptions="Start" VerticalOptions="Start"
+            BackgroundColor="White">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid VerticalOptions="Center">
+                        <Label  Text="{Binding}" VerticalOptions="Center"  />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>
